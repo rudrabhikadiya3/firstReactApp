@@ -89,11 +89,15 @@ function App() {
 
   let medicineFilter = medicine.filter((d, i) => d.status === true && d.expiry >= 2022)
   let total_price = medicineFilter.reduce((acc, d, i) => acc + d.price, 0)
-  return (
-    <div>
-      <table border="1">
 
-        <tr >
+  let empFilter = empData.filter((d,i)=> d.status === true);
+  let total_salary = empFilter.reduce((acc,d,i)=> acc + d.salary + d.bonus ,0)
+
+
+  return (
+    <div className="App">
+      <table border="1">
+        <tr>
           <th>ID</th>
           <th>Name</th>
           <th>Quantity</th>
@@ -102,11 +106,10 @@ function App() {
           <th>Status</th>
           <th>total price</th>
         </tr>
-
-
-        {
+        { 
           medicineFilter.map((v, i) => {
             let { id, name, quantity, price, expiry, status } = v;
+
             return (
               <tr key={i}>
                 <td >{id}</td>
@@ -122,17 +125,35 @@ function App() {
         }
       </table>
       <table border="1">
-
-        <tr >
-          <th>ID</th>
+        <thead>
+          <tr>
           <th>Name</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Expiry</th>
-          <th>Status</th>
-          <th>total price</th>
-        </tr>
+          <th>Age</th>
+          <th>salary</th>
+          <th>bonus</th>
+          <th>status</th>
+          <th>CTC</th>
+          <th>Total Salary</th>
+          </tr>
+        </thead>
+        { 
+          empFilter.map((d, i) =>{
+            let {name , age, salary,bonus,status} = d;
+            return(
+              <tr key={i}>
+                <td>{name}</td>
+                <td>{age}</td>
+                <td>{salary}</td>
+                <td>{bonus}</td>
+                <td>{status.toString()}</td>
+                <td>{d.salary + d.bonus}</td>
+                {i === 0 ? <td rowSpan={4}>{total_salary}</td> : null}
+              </tr>      
+            )
+          })
+        }
       </table>
+      
 
     </div>
 
