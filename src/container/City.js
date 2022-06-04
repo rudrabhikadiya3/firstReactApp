@@ -17,7 +17,7 @@ class City extends Component {
         return (
             <div>
                 <p>{this.state.cityName}</p>
-                <button onClick={() => this.changeCity()}> change city</button>
+                <button onClick={() => this.changeCity()}> change city city</button>
             </div>
         );
     }

@@ -5,9 +5,6 @@ class Demofile extends Component {
         return (
             <div>
                 <h1>Hello World, this is first Component</h1>
-
-
-
             </div>
         );
     }
