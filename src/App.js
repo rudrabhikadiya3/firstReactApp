@@ -5,14 +5,16 @@ import City from './container/City'; //Class base Component
 import CityFunc from './container/CityFunc'; //Function base Component
 import CountryFunc from './container/CountryFunc';
 import Places from './container/Places';
+import LifeCycle from './container/Timer/LifeCycle';
 
 function App() {
   return (
     <div className="App">
       {/* <CityFunc/> */}
       {/* <City/> */}
-      <CountryFunc/>
       {/* <Places/> */}
+      {/* <CountryFunc/> */}
+      <LifeCycle/>
     </div>
   );
 }
