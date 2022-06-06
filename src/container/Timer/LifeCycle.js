@@ -13,7 +13,6 @@ class LifeCycle extends Component {
             time : new Date()
         })
     }
-
     componentDidMount = () => {
         // 3
         this.timeI = setInterval(() => {this.tick()},1000);
@@ -24,7 +23,6 @@ class LifeCycle extends Component {
             console.log('CopmpnentDidUpdate');
         }
     }
-    
     render() {
         return (
             // 2
