@@ -19,6 +19,7 @@ class LifeCycle extends Component {
         this.timeI = setInterval(() => {this.tick()},1000);
     }
     componentDidUpdate = (prevProps,prevState) => {
+        //4
         if(this.state.time !== prevState.time){
             console.log('CopmpnentDidUpdate');
         }
