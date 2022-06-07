@@ -6,6 +6,7 @@ import CityFunc from './container/CityFunc'; //Function base Component
 import CountryFunc from './container/CountryFunc';
 import Places from './container/Places';
 import LifeCycle from './container/Timer/LifeCycle';
+import LifeCycleFunc from './container/Timer/LifeCycleFunc';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <City/> */}
       {/* <Places/> */}
       {/* <CountryFunc/> */}
-      <LifeCycle/>
+      {/* <LifeCycle/> */}
+      <LifeCycleFunc/>
     </div>
   );
 }
